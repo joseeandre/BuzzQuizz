@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 69px;
+    color: white;
+    background-color: #EC362D;
+    font-size: 37px;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.conteudo {
+    width: 1051px;
+    margin: 77px auto 0 auto;
+    box-sizing: border-box;
+}
+
+.conteudo .criar-quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 181px;
+    border: 1px dashed #D5D5D5;
+    box-sizing: border-box;
+    margin-bottom: 77px;
+}
+
+.conteudo .criar-quiz .nenhum-quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B9B9B9;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 107px;
+}
+
+.conteudo .criar-quiz button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EC362D;
+    font-size: 21px;
+    text-align: center;
+    border: 1px dashed #EC362D;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 151px;
+    height: 40px;
+    background-color: white;
+}
+
+.conteudo .todos-quizzes .quizzes {
+    display: flex;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.quiz {
+    width: 340px;
+    height: 181px;
+    margin-right: 15px;
+    margin-bottom: 12px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.quiz img {
+    width: 340px;
+    height: 181px;
+    border-radius: 5px;
+}
+
+.conteudo .todos-quizzes .quiz:nth-child(3n) {
+    margin-right: 0;
+}
+
+.quiz .legenda-quiz {
+    position: absolute;
+    width: 301px;
+    font-size: 19px;
+    color: white;
+    bottom: 14px;
+    left: 18px;
+}

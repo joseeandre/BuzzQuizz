@@ -1,0 +1,12 @@
+@media (max-width: 630px) {
+    .conteudo {
+        width: 340px;
+        margin-top: 31px;
+    }
+    .conteudo .criar-quiz {
+        margin-bottom: 35px;
+    }
+    .quiz {
+        margin-right: 0;
+    }
+}
