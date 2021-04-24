@@ -33,12 +33,12 @@ strong{
     font-size: 39px;
     line-height: 46px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
     color: #FFFFFF;
     margin-top:70px;
     background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://atorredecontrole.com.br/wp-content/uploads/2020/03/valorant_jett_duotoned.jpg");
-    background-size: 100% ;
+    background-size: 100%;
 }
 
 .questions{
