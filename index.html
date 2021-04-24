@@ -17,7 +17,7 @@
 <body>
     <div class="topo">BuzzQuizz</div>
 
-    <div class="conteudo">
+    <div class="tela1">
         <div class="criar-quiz">
             <div class="nenhum-quiz">Você não criou nenhum quizz ainda :(</div>
             <button onclick="criarQuizz()">Criar Quizz</button>
@@ -32,6 +32,74 @@
         <div class="todos-quizzes">
             <strong>Todos os Quizzes</strong>
             <div class="quizzes"></div>
+        </div>
+    </div>
+
+    <div class="oculto tela3">
+        <div class="comeco-quiz">
+            <div class="centralizar">
+                <strong>Começar pelo começo</strong>
+            </div>
+            <div class="informacoes">
+                <input type="text" placeholder="Título do seu quizz">
+                <input type="text" placeholder="URL da imagem do seu quizz">
+                <input type="text" placeholder="Quantidade de perguntas do quizz">
+                <input type="text" placeholder="Quantidade de níveis do quizz">
+            </div>
+            <div class="centralizar">
+                <button onclick="criarPerguntas()">Prosseguir para criar perguntas</button>
+            </div>
+        </div>
+        <div class="oculto perguntas">
+            <div class="centralizar">
+                <strong>Crie suas perguntas</strong>
+            </div>
+            <div class="informacoes">
+                <div class="pergunta">
+                    <div class="titulo">Pergunta 1</div>
+                    <input type="text" placeholder="Texto da pergunta">
+                    <input type="text" placeholder="Cor de fundo da pergunta">
+                    <div class="titulo">Resposta Correta</div>
+                    <input type="text" placeholder="Resposta correta">
+                    <input type="text" placeholder="URL da imagem">
+                    <div class="titulo">Respostas Incorretas</div>
+                    <input type="text" placeholder="Resposta incorreta 1">
+                    <input type="text" placeholder="URL da imagem 1">
+                    <input type="text" placeholder="Resposta incorreta 2">
+                    <input type="text" placeholder="URL da imagem 2">
+                    <input type="text" placeholder="Resposta incorreta 3">
+                    <input type="text" placeholder="URL da imagem 3">
+                </div>
+            </div>
+            <div class="centralizar">
+                <button onclick="criarNiveis()">Prosseguir para criar níveis</button>
+            </div>
+        </div>
+        <div class="oculto niveis">
+            <div class="centralizar">
+                <strong>Agora, decida os níveis!</strong>
+            </div>
+            <div class="informacoes">
+                <div class="nivel">
+                    <div class="titulo">Nivel 1</div>
+                    <input type="text" placeholder="Título do nivel">
+                    <input type="text" placeholder="% de acerto mínima">
+                    <input type="text" placeholder="URL da imagem do nível">
+                    <input type="text" placeholder="Descrição do nível">
+                </div>
+            </div>
+            <div class="centralizar">
+                <button onclick="finalizarQuiz()">Finalizar Quizz</button>
+            </div>
+        </div>
+        <div class="oculto finalizar">
+            <div class="centralizar">
+                <strong>Seu quizz está pronto!</strong>
+            </div>
+            <div class="quiz"></div>
+            <div class="centralizar">
+                <button onclick="acessarQuiz()">Acessar Quizz</button>
+            </div>
         </div>
     </div>
 

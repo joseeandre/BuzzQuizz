@@ -1,12 +1,16 @@
 @media (max-width: 630px) {
-    .conteudo {
+    .tela1 {
         width: 340px;
         margin-top: 31px;
     }
-    .conteudo .criar-quiz {
+    .tela1.criar-quiz {
         margin-bottom: 35px;
     }
     .quiz {
         margin-right: 0;
+    }
+    .tela3 {
+        width: 375px;
+        margin-top: 31px;
     }
 }

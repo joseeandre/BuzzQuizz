@@ -43,5 +43,36 @@ function processarQuizzes(resposta) {
     }
 }
 
+function criarQuizz() {
+    let tela1 = document.querySelector(".tela1");
+    let tela3 = document.querySelector(".tela3");
+
+    tela1.classList.add("oculto");
+    tela3.classList.remove("oculto");
+}
+
+function criarPerguntas() {
+    let comeco = document.querySelector(".comeco-quiz");
+    let perguntas = document.querySelector(".perguntas");
+
+    comeco.classList.add("oculto");
+    perguntas.classList.remove("oculto");
+}
+
+function criarNiveis() {
+    let niveis = document.querySelector(".niveis");
+    let perguntas = document.querySelector(".perguntas");
+
+    perguntas.classList.add("oculto");
+    niveis.classList.remove("oculto");
+}
+
+function finalizarQuiz() {
+    let niveis = document.querySelector(".niveis");
+    let final = document.querySelector(".finalizar");
+
+    niveis.classList.add("oculto");
+    final.classList.remove("oculto");
+}
 
 aoEntrarNaPagina();
