@@ -20,7 +20,14 @@
     <div class="conteudo">
         <div class="criar-quiz">
             <div class="nenhum-quiz">Você não criou nenhum quizz ainda :(</div>
-            <button>Criar Quizz</button>
+            <button onclick="criarQuizz()">Criar Quizz</button>
+        </div>
+        <div class="oculto meus-quizzes">
+            <div class="criar-outro">
+                <strong>Seus Quizzes</strong>
+                <ion-icon onclick="criarQuizz()" name="add-circle"></ion-icon>
+            </div>
+            <div class="quizzes"></div>
         </div>
         <div class="todos-quizzes">
             <strong>Todos os Quizzes</strong>
@@ -29,6 +36,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="assets/javascript/script.js"></script>
 </body>
 
