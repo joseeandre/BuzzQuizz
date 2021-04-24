@@ -17,54 +17,10 @@
         <div class="top">BuzzQuizz</div>
         <div class="quizz-image"></div>
         <div class="questions" >
-            <div class="question" id="0">
-                <div class="title">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
-                <div class="option" onclick="selectOption(this)">
-                    <img src="assets/imgs/image 3.png" />
-                    <div class="answer">Gatíneo</div>
-                </div>
-                <div class="option" onclick="selectOption(this)">
-                    <img src="assets/imgs/image 4.png" />
-                    <div class="answer">Gatíneo</div>
-                </div>
-                <div class="option" onclick="selectOption(this)">
-                    <img src="assets/imgs/image 3.png" />
-                    <div class="answer">Gatíneo</div>
-                </div>
-                <div class="option" onclick="selectOption(this)">
-                    <img src="assets/imgs/image 3.png" />
-                    <div class="answer">Gatíneo</div>
-                </div>
-            </div>
-            <div class="question" id="1">
-                <div class="title">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
-                <div class="option" onclick="selectOption(this)">
-                    <img src="assets/imgs/image 3.png" />
-                    <div class="answer">Gatíneo</div>
-                </div>
-                <div class="option" onclick="selectOption(this)">
-                    <img src="assets/imgs/image 3.png" />
-                    <div class="answer">Gatíneo</div>
-                </div>
-                <div class="option" onclick="selectOption(this)">
-                    <img src="assets/imgs/image 3.png" />
-                    <div class="answer">Gatíneo</div>
-                </div>
-                <div class="option" onclick="selectOption(this)">
-                    <img src="assets/imgs/image 3.png" />
-                    <div class="answer">Gatíneo</div>
-                </div>
-            </div>
-            <div class="result">
-                <div class="title">88% de acerto: Você é praticamente um aluno de Hogwarts!</div>
-                <div class="description">
-                    <img src="assets/imgs/image 10.png" />
-                    <span><strong>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</strong></span>
-                </div>
-            </div>
+            
         </div>
-        <button class="reload-button">Reiniciar Quizz</button>
-        <button class="home-button">Voltar pra home</button>
+        <button class="reload-button hidden" onclick="remakeQuizz()">Reiniciar Quizz</button>
+        <button class="home-button hidden">Voltar pra home</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/javascript/script.js"></script>
