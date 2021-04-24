@@ -2,16 +2,71 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuzzQuizz</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    <div class="quizz">
+        <div class="top">BuzzQuizz</div>
+        <div class="quizz-image"></div>
+        <div class="questions" >
+            <div class="question" id="0">
+                <div class="title">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
+                <div class="option" onclick="selectOption(this)">
+                    <img src="assets/imgs/image 3.png" />
+                    <div class="answer">Gatíneo</div>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <img src="assets/imgs/image 4.png" />
+                    <div class="answer">Gatíneo</div>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <img src="assets/imgs/image 3.png" />
+                    <div class="answer">Gatíneo</div>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <img src="assets/imgs/image 3.png" />
+                    <div class="answer">Gatíneo</div>
+                </div>
+            </div>
+            <div class="question" id="1">
+                <div class="title">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
+                <div class="option" onclick="selectOption(this)">
+                    <img src="assets/imgs/image 3.png" />
+                    <div class="answer">Gatíneo</div>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <img src="assets/imgs/image 3.png" />
+                    <div class="answer">Gatíneo</div>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <img src="assets/imgs/image 3.png" />
+                    <div class="answer">Gatíneo</div>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <img src="assets/imgs/image 3.png" />
+                    <div class="answer">Gatíneo</div>
+                </div>
+            </div>
+            <div class="result">
+                <div class="title">88% de acerto: Você é praticamente um aluno de Hogwarts!</div>
+                <div class="description">
+                    <img src="assets/imgs/image 10.png" />
+                    <span><strong>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</strong></span>
+                </div>
+            </div>
+        </div>
+        <button class="reload-button">Reiniciar Quizz</button>
+        <button class="home-button">Voltar pra home</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/javascript/script.js"></script>
 </body>
 
