@@ -34,6 +34,7 @@ function aoEntrarNaPagina() {
 function meusQuizzes() {
     let criarQuiz = document.querySelector(".criar-quiz");
     let meuQuiz = document.querySelector(".meus-quizzes");
+    console.log(localStorage.length);
     if (localStorage.length > 0) {
         criarQuiz.style.display = "none";
         meuQuiz.classList.remove("oculto");
