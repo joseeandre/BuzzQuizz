@@ -35,7 +35,7 @@ function meusQuizzes() {
     let criarQuiz = document.querySelector(".criar-quiz");
     let meuQuiz = document.querySelector(".meus-quizzes");
 
-    if (localStorage.key(0) === null) {
+    if (localStorage.key(0) != null) {
         criarQuiz.style.display = "none";
         meuQuiz.classList.remove("oculto");
     }
