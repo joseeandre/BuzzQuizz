@@ -95,7 +95,7 @@ strong{
 
 .level{
     background-color: #FFFFFF;
-    margin: 60px 0;
+    margin: 50px 0;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
 }
@@ -155,4 +155,61 @@ button{
 }
 .blurry{
     opacity: 0.3;
+}
+
+@media (max-width: 760px){
+    .questions{
+        width: 100%;
+    }
+    .quizz-image{
+        font-size: 19px;
+        line-height: 22px;
+    }
+    .question .title{
+        font-size: 19px;
+        line-height: 22px;
+    }
+    .question .option{
+        width: calc(50% - 5px);
+        margin-top: 10px;
+    }
+    .question .option:nth-child(2n){
+        margin-right: 10px;
+    }
+    .question .option .answer{
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .question .option img{
+        max-height: 115px;
+        margin-bottom: 5px;
+    }
+    .level{
+        margin: 25px 0;
+    }
+    .level .title{
+        font-size: 19px;
+        line-height: 22px;;
+    }
+    .level .description{
+        margin-top: 10px;
+        height: 360px;
+        display: initial;
+    }
+    .level .description img{
+        height: 255px;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .level .description span{
+        width: 100%;
+        max-height: calc(100% - 260px);
+        font-size: 17px;
+        line-height: 20px;
+    }
+    button{
+        width: 220px;
+        height: 44px;
+    }
 }
