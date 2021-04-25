@@ -158,13 +158,13 @@ function criarNiveis() {
                 verificador = false;
                 break;
             } else {
-                if (!(textoResposta[4 * i].value && textoResposta[4 * i + 1].value && textoResposta[4 * i + 2].value && textoResposta[4 * i + 3].value)) {
+                if (!(textoResposta[4 * i].value && textoResposta[4 * i + 1].value)) {
                     mensagem = "Resposta invalida na pergunta " + n.toString();
                     alert(mensagem);
                     verificador = false;
                     break;
                 } else {
-                    if (!(validarURL(urlAlternativa[4 * i].value) && validarURL(urlAlternativa[4 * i + 1].value) && validarURL(urlAlternativa[4 * i + 2].value) && validarURL(urlAlternativa[4 * i + 3].value))) {
+                    if (!(validarURL(urlAlternativa[4 * i].value) && validarURL(urlAlternativa[4 * i + 1].value))) {
                         mensagem = "URL invalida na pergunta " + n.toString();
                         alert(mensagem);
                         verificador = false;
@@ -173,8 +173,10 @@ function criarNiveis() {
                         resposta = { "text": textoResposta[4 * i].value, "image": urlAlternativa[4 * i].value, "isCorrectAnswer": true };
                         questaoQuizz.answers.push(resposta);
                         for (let j = 1; j <= 3; j++) {
-                            resposta = { "text": textoResposta[4 * i + j].value, "image": urlAlternativa[4 * i + j].value, "isCorrectAnswer": false };
-                            questaoQuizz.answers.push(resposta);
+                            if (textoResposta[j] != null) {
+                                resposta = { "text": textoResposta[4 * i + j].value, "image": urlAlternativa[4 * i + j].value, "isCorrectAnswer": false };
+                                questaoQuizz.answers.push(resposta);
+                            }
                         }
                         verificador = true;
                         objetoQuizz.questions.push(questaoQuizz);
