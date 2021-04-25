@@ -147,8 +147,7 @@ strong {
     align-items: center;
 }
 
-.comeco-quiz .informacoes,
-.niveis .informacoes {
+.comeco-quiz .informacoes {
     width: 100%;
     box-sizing: border-box;
     padding-bottom: 21px;
@@ -205,11 +204,12 @@ strong {
     font-weight: bold;
 }
 
-.nivel button:nth-child(4) {
+.niveis button:nth-child(4) {
     height: 177px;
 }
 
-.pergunta {
+.pergunta,
+.nivel {
     background-color: white;
     margin-bottom: 24px;
     padding-bottom: 21px;
