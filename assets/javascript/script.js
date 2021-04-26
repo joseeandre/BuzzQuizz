@@ -17,7 +17,6 @@ let levelQuizz;
 let respostasQuizz = [];
 let resposta;
 
-let quizzlist;
 let selectedQuizz;
 let isQuestionInBlank = [];
 let numberOfCorrectQuestions = 0;
@@ -34,7 +33,7 @@ function aoEntrarNaPagina() {
 function meusQuizzes() {
     let criarQuiz = document.querySelector(".criar-quiz");
     let meuQuiz = document.querySelector(".meus-quizzes");
-    if (localStorage != null) {
+    if (localStorage.key(0) != null) {
         criarQuiz.style.display = "none";
         meuQuiz.classList.remove("oculto");
     }
@@ -76,6 +75,7 @@ function processarQuizzes(resposta) {
             meuQuizz = JSON.parse(meuQuizz);
             foto = meuQuizz.image;
             titulo = meuQuizz.title;
+            id = meuQuizz.id;
             novoQuizz = '<div class="quiz" id="' + id + '" onclick="showQuizz(this)"><img src=' + foto + ' alt=""><div class="legenda-quiz">' + titulo + '</div><div class="gradiente"></div></div>'
 
             meusquizzesHTML.innerHTML += novoQuizz;
@@ -190,7 +190,7 @@ function criarNiveis() {
                         resposta = { "text": textoResposta[4 * i].value, "image": urlAlternativa[4 * i].value, "isCorrectAnswer": true };
                         questaoQuizz.answers.push(resposta);
                         for (let j = 1; j <= 3; j++) {
-                            if (textoResposta[j] != null) {
+                            if (textoResposta[4*i + j].value != "") {
                                 resposta = { "text": textoResposta[4 * i + j].value, "image": urlAlternativa[4 * i + j].value, "isCorrectAnswer": false };
                                 questaoQuizz.answers.push(resposta);
                             }
@@ -313,6 +313,7 @@ function novoQuizz(promessa) {
     let novoQuizz;
     let quizz = promessa.data;
     let quizAmostra = document.querySelector(".finalizar").querySelector(".quizAmostra");
+    let id
 
     localStorage.setItem(quizz.id.toString(), JSON.stringify(quizz));
     foto = quizz.image;
@@ -328,38 +329,20 @@ function voltarHome() {
     location.reload();
 }
 
-// gabigol
-
-getQuizzList()
+// selected quizz
 
 
-function getQuizzList() {
-    const promise = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/buzzquizz/quizzes")
-    promise.then(loadQuizzes)
-    promise.catch(quizzesError)
-}
 
-function loadQuizzes(reply) {
-    quizzlist = reply.data
-
-}
-
-function quizzesError() {
-    alert("Não foi possível obter os quizzes !")
-    location.reload()
-}
-
-
-function showQuizz(quizzId) {
+function showQuizz(element) {
     tela1.classList.add("oculto");
     tela3.classList.add("oculto");
     const quizz = document.querySelector(".selected-quizz")
     quizz.scrollIntoView({ behavior: "smooth" })
     quizz.classList.remove("hidden")
     const questions = quizz.querySelector(".questions")
-    for (let i = 0; i < quizzlist.length; i++) {
-        if (parseInt(quizzId.id) === quizzlist[i].id) {
-            selectedQuizz = quizzlist[i]
+    for (let i = 0; i < quizzes.length; i++) {
+        if (parseInt(element.id) === quizzes[i].id) {
+            selectedQuizz = quizzes[i]
         }
     }
     setAllQuestionsInBlank(selectedQuizz)

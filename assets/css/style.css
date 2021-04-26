@@ -10,6 +10,9 @@ strong {
 }
 
 .topo {
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +23,7 @@ strong {
     font-size: 37px;
     font-weight: bold;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
 }
 
 .tela1 {
@@ -39,6 +43,7 @@ strong {
     box-sizing: border-box;
     margin-bottom: 77px;
     background-color: #FAFAFA;
+    margin-top: 140px;
 }
 
 .tela1 .criar-quiz .nenhum-quiz {
@@ -121,6 +126,7 @@ strong {
 
 .meus-quizzes {
     margin-bottom: 48px;
+    margin-top: 69px;
 }
 
 .criar-outro {
@@ -137,7 +143,7 @@ strong {
 
 .tela3 {
     width: 600px;
-    margin: 77px auto 0 auto;
+    margin: 100px auto 0 auto;
     box-sizing: border-box;
 }
 
@@ -236,8 +242,10 @@ strong {
 }
 
 
-/* gabigol */
-
+/*selected quizz*/
+.selected-quizz{
+    word-break: break-word;
+}
 .quizz-image {
     width: 100%;
     height: 350px;
@@ -248,7 +256,7 @@ strong {
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
-    margin-top: 70px;
+    margin-top: 69px;
     background-size: 100%;
 }
 
@@ -278,6 +286,7 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #FFFFFF;
 }
 
@@ -326,6 +335,7 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     background-color: #EC362D;
     color: #FFFFFF;
 }
@@ -338,7 +348,7 @@ strong {
 
 .level .description img {
     height: 100%;
-    max-width: 60%;
+    max-width: 50%;
     margin-right: 15px;
 }
 
@@ -348,6 +358,7 @@ strong {
     line-height: 25px;
     color: #484848;
 }
+
 
 .selected-quizz button {
     width: 260px;
@@ -374,7 +385,7 @@ strong {
     margin-bottom: 80px;
 }
 
-.hidden {
+.selected-quizz .hidden {
     display: none;
 }
 

@@ -3,16 +3,21 @@
         width: 340px;
         margin-top: 31px;
     }
-    .tela1.criar-quiz {
+    .tela1 .criar-quiz {
         margin-bottom: 35px;
+        margin-top: 100px;
     }
     .quiz {
         margin-right: 0;
     }
     .tela3 {
         width: 375px;
-        margin-top: 31px;
+        margin-top: 80px;
     }
+    
+}
+
+@media (max-width: 760px){
     .questions {
         width: 100%;
     }
@@ -53,7 +58,6 @@
         display: initial;
     }
     .level .description img {
-        height: 255px;
         max-width: 100%;
         width: 100%;
         margin-right: 0;
